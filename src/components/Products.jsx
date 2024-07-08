@@ -3,9 +3,9 @@ import ProductCard from "./ProductCard"
 
 const Products = () => {
   return (
-    <div className="w-[80vw] mt-3 mb-[50%]">
+    <div className="w-[80vw] mt-3 md:mb-[50%] mb-[100%]">
         <div className="mb-4 mt-4">
-            <ul className="text-gray-800 flex items-start justify-start gap-3">
+            <ul className="text-gray-800 flex items-start flex-wrap justify-start gap-3">
                 <li className="text-black font-semibold">Full catalogue</li>
                 <li>Leather</li>
                 <li>Mechanical</li>

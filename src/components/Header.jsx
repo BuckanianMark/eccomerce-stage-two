@@ -9,7 +9,7 @@ const Header = () => {
     const [open,setOpen] = useState(false)
     const cartItemNumber = useSelector((state) => state.watch.cartItem)
   return (
-    <div className="flex justify-evenly items-center py-8 px-auto w-[80vw]">
+    <div className="flex justify-between items-center py-8 px-auto w-[80vw]">
         <div className="flex items-center justify-evenly gap-4">
             <Link to="/" className="text-gray-900 font-bold text-xl">
             Doclan <span className="text-[coral]">Co.</span>
@@ -30,7 +30,7 @@ const Header = () => {
             </ul>
         </div>
         <div className="flex items-center gap-[20px]">
-            <div className="border border-gray-400 rounded flex items-center justify-between  px-2">
+            <div className="border border-gray-400 rounded sm:flex hidden items-center justify-between  px-2">
                 <input type="text" className="border-none  outline-none "/>
                 <button><CiSearch /></button>
             </div>
@@ -50,7 +50,7 @@ const Header = () => {
             <CiMenuBurger className="text-lg font-bold cursor-pointer" />
             </div>
             {open && (
-             <div className="flex lg:hidden absolute items-center transition-all duration-100 delay-100 justify-center bg-gray-200 w-[200px] h-[50vh] top-0 right-0">
+             <div className="flex lg:hidden absolute items-center transition-all z-[999] duration-100 delay-100 justify-center bg-gray-200 w-[200px] h-[50vh] top-0 right-0">
              <span className="absolute top-0 cursor-pointer right-0 mt-8 mr-4" onClick={() => setOpen(false)}>
              <FaTimes />
              </span>
