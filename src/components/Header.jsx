@@ -30,7 +30,7 @@ const Header = () => {
             </ul>
         </div>
         <div className="flex items-center gap-[20px]">
-            <div className="border border-gray-400 rounded sm:flex hidden items-center justify-between  px-2">
+            <div className="border border-gray-400 rounded md:flex hidden items-center justify-between  px-2">
                 <input type="text" className="border-none  outline-none "/>
                 <button><CiSearch /></button>
             </div>
