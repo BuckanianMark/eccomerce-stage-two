@@ -9,12 +9,14 @@ function App() {
   return (
     <>
     <Toaster visibleToasts={1} position="top-right" richColors  />
-    <div className='w-[100vw] flex items-center justify-center flex-col h-[100%]'>
+    <div className='w-[100vw] flex items-center justify-center flex-col '>
+      <div>
       <Header />
-      <main className='h-[100%] min-h-[calc(100vh)] '>
+      </div>
+      <div className='  '>
         <Outlet />
-      </main>
-      <div className='fixed bottom-0 bg-slate-300 w-screen flex items-center justify-center'>
+      </div>
+      <div className=' bg-slate-300 mt-6 w-screen flex items-center justify-center'>
         <Footer />
       </div>
     </div>

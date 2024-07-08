@@ -3,7 +3,7 @@ import Products from "../components/Products"
 
 const HomePage = () => {
   return (
-    <div className=" flex flex-col items-center w-[100vw] h-[150vh] " >
+    <div className=" flex flex-col items-center w-[100vw] h-[100%] " >
         <div className="mx-auto">
             <Banner />
         </div>
