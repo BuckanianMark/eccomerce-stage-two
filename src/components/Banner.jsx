@@ -2,7 +2,7 @@
 const Banner = () => {
   return (
     <div 
-    className="h-[400px] flex items-center justify-center bg-cover bg-center relative  w-[80vw]"
+    className="h-[400px] flex items-center justify-center bg-cover bg-center relative  w-[100vw]"
     style={{backgroundImage:'url(banner.jpeg)',backgroundPosition:'center',backgroundBlendMode:'darken',  backgroundColor: 'rgba(0, 0, 0, 0.1)'}}>
         <div className="text-black absolute left-0 ml-[10%] flex flex-col gap-4">
             <h2 className="text-xl">Join the club of </h2>
