@@ -14,9 +14,9 @@ const CheckoutPage = () => {
         <FaArrowLeft />
         Back to Cart</Link>
         
-        <div className="flex items-start lg:flex-row flex-col gap-[10px] mt-5">
+        <div className="flex items-start lg:flex-row flex-col  gap-[10px] mt-5">
             
-            <div className="lg:w-1/2 w-[100%] bg-[whitesmoke]">
+            <div className="lg:w-1/2 w-[100%] px-4  bg-[whitesmoke]">
             {/* {watchCartItem.length > 0 && */}
             {watchCartItem.map((item) => (
                 <div key={item.id} className="flex bg-[whitesmoke] border-b mx-2 mb-2 py-2 px-2 justify-between items-center max-w-[600px]">

@@ -16,7 +16,7 @@ const fetchProducts = async (page) => {
           organization_id: 'f96ae6587a304fd48610f8f375a810c1',
           reverse_sort: false,
           page: page,
-          size: 5,
+          size: 10,
           Appid: 'Y5E4VX1RFSZX5ND',
           Apikey: '27beb60cd086441f9392257c35ffc2a320240713194919556965',
       },
