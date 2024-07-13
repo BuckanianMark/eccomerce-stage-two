@@ -114,7 +114,9 @@ if (isEmpty) return <div>No products found</div>;
                 <Button onClick={() => setPage(page > 1 ? page - 1 : 1)} className="bg-[whitesmoke] py-1 px-3 rounded font-semibold flex items-center justify-center"><FaChevronLeft /></Button>
                 <Button onClick={() => setPage(page + 1)} className="bg-[whitesmoke] py-1 px-3 rounded font-semibold"> <FaChevronRight /></Button>
             </Group>
+
         </Container>
+        <div></div>
     </div>
   )
 }
