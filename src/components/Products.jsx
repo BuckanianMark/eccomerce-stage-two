@@ -66,7 +66,7 @@ if (isEmpty) return <div>No products found</div>;
   return (
     <div className="w-[80vw] mt-3 relative">
         <div className="mb-4 mt-4">
-            <ul className="text-gray-800 flex items-start flex-wrap justify-start gap-3">
+            <ul className="text-gray-800 flex sm:flex-row flex-col items-start flex-wrap justify-start gap-3">
                 <li className="text-black font-semibold">Full catalogue</li>
                 <li>Leather</li>
                 <li>Mechanical</li>
@@ -74,7 +74,7 @@ if (isEmpty) return <div>No products found</div>;
             </ul>
         </div>
         <Container className="flex items-center gap-[20px] flex-wrap justify-center">
-            <Group>
+            <Group className="flex items-center gap-[20px] flex-wrap justify-center">
                 {products.map((product) => (
                     <Card 
                     className="md:w-[317px] h-[384px] w-[200px]   rounded-[8px] relative object-fit bg-[whitesmoke]"
@@ -82,18 +82,16 @@ if (isEmpty) return <div>No products found</div>;
                      shadow="sm" padding="lg" 
                      radius="md" 
                      withBorder>
-                        <Card.Section>
-                          <Link to={product?.id}>
-                          <div className="h-[80%] overflow-hidden">
-
+                        <Card.Section className="h-[80%] overflow-hidden">
+                          <Link to={product?.id}> 
                             <Image 
                             src={`https://api.timbu.cloud/images/${product.photos[0].url}`} 
-                            height={160} alt={product.name} 
-                            className="w-[100%] object-fill "/>
-                          </div>
+                             alt={product.name} 
+                            className="w-[100%]   overflow-hidden object-fill "/>
+                          
                           </Link>
                         </Card.Section>
-                        <Group position="apart" mt="md" mb="xs">
+                        <Group position="apart" mt="md" mb="xs" className="">
                           <div className="ml-4 mt-2">
                             <Text className="font-bold text-black">{product.name}</Text>
                             <Badge color="pink" variant="light">

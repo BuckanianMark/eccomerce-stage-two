@@ -6,7 +6,7 @@ import { decreaseQuantity, deleteCartItem, increaseQuantity } from "../redux/car
 const CartItem = ({id,title,picture,price,color,size,qty}) => {
     const dispatch = useDispatch();
   return (
-    <div className="flex bg-[whitesmoke] py-2 px-2 mb-2 items-start justify-between height-[200px]" >
+    <div className="flex bg-[whitesmoke] sm:flex-row flex-col py-2 px-2 mb-2 items-start justify-between height-[200px]" >
         <div className=" w-[120px]">
             <img src={picture} alt="image"  />
         </div>

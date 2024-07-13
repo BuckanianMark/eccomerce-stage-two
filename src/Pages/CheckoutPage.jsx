@@ -9,7 +9,7 @@ const CheckoutPage = () => {
     const tax = 612
     const total = totalPrice + tax
     return (
-    <div className="w-[80vw] lg:h-[110vh] h-[180vh]">
+    <div className="w-[80vw] h-[100%] mb-2">
         <Link to="/cart" className="flex items-center gap-3">
         <FaArrowLeft />
         Back to Cart</Link>
@@ -19,7 +19,7 @@ const CheckoutPage = () => {
             <div className="lg:w-1/2 w-[100%] px-4  bg-[whitesmoke]">
             {/* {watchCartItem.length > 0 && */}
             {watchCartItem.map((item) => (
-                <div key={item.id} className="flex bg-[whitesmoke] border-b mx-2 mb-2 py-2 px-2 justify-between items-center max-w-[600px]">
+                <div key={item.id} className="flex bg-[whitesmoke] border-b sm:flex-row flex-col mx-2 mb-2 py-2 px-2 justify-between items-center max-w-[600px]">
                     <div>
                         <img src={item.picture} alt={item.title} width={100} />
                     </div>
@@ -28,7 +28,8 @@ const CheckoutPage = () => {
                         <span>Qty: {item.qty}</span>
                     </div>
                     <div className="font-semibold">
-                        ${item.price}
+                        Price:
+                        KES{item.price}
                     </div>
                     </div>
           ))}
@@ -114,8 +115,8 @@ const CheckoutPage = () => {
                 <FaCcMastercard />
                 </div>
                 </div>
-                <div className="flex gap-4 mt-2 mb-4">
-                <div  className="flex flex-col items-start gap-2">
+                <div className="flex gap-4 sm:flex-row flex-col mt-2 mb-4">
+                <div  className="flex flex-col  items-start gap-2">
                 <label >Expiry Date</label>
                 <input 
                 type="text" 

@@ -34,7 +34,7 @@ const ProductDetails = () => {
           const data = await fetchProduct(id);
           console.log(data)
           setProduct(data);
-          setIsEmpty(data.total === 0);
+          setIsEmpty(!data);
       } catch (error) {
           setIsError(true);
       } finally {
@@ -48,7 +48,7 @@ const ProductDetails = () => {
     dispatch(addCartItem({
       id:product?.id,
       title:product.name,
-      price:product?.current_price[0]?.KES[0],
+      price: product?.current_price?.[0]?.KES?.[0] ?? 'N/A',
       picture:`https://api.timbu.cloud/images/${product.photos[0].url}`,
       // color:color,
       // size:size
@@ -58,7 +58,7 @@ const ProductDetails = () => {
   if (isError) return <div>Error fetching products</div>;
   if (isEmpty) return <div>No product found</div>;
   if(product) return (
-    <div className="flex items-start md:flex-row flex-col w-[80vw] justify-center">
+    <div className="flex md:items-start items-center md:flex-row  flex-col w-[80vw] justify-center">
       <div className="w-1/2 max-w-[400px]">
         <img  
         src={`https://api.timbu.cloud/images/${product.photos[0].url}`}  

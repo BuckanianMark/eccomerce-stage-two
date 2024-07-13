@@ -7,7 +7,7 @@ const CartPage = () => {
   const totalPrice = watchCartItem.reduce((acc,curr) => acc + parseInt(curr.total),0)
   const totalQty = watchCartItem.reduce((acc,curr) => acc + parseInt(curr.qty),0)
   return (
-    <div className="w-[80vw] h-[120vh]">
+    <div className="w-[80vw] h-[100%]">
       <h1 className="text-xl font-semibold">Your Cart</h1>
       <div className="flex items-start flex-col lg:flex-row justify-center gap-[20px] ">
         <div className="lg:w-[60%] w-[100%] max-w-[700px] rounded py-4 px-3">
@@ -42,14 +42,14 @@ const CartPage = () => {
           }
         </div>
         {watchCartItem.length > 0 &&
-        <div className="lg:w-[40%]w-[100%]  max-w-[450px] rounded py-2 px-3 ">
+        <div className="lg:w-[40%] w-[100%]  max-w-[450px] rounded py-2 px-3 ">
           <div className="bg-[whitesmoke] flex items-center flex-col py-2 mb-3">
           <div className="flex items-end justify-end">
             Subtotal[{totalQty} Watches] : <span className="font-semibold text-black">${totalPrice}</span> 
           </div>
           <Link to='/checkout' className="bg-black text-white rounded-full w-max px-5 py-2">Proceed to Checkout</Link>
           </div>
-          <div className="bg-[whitesmoke] relative overflow-hidden flex items-start justify-between px-1 py-2 mb-3">
+          <div className="bg-[whitesmoke] relative overflow-hidden flex items-start sm:flex-row flex-col justify-between px-1 py-2 mb-3">
             <div className="font-bold text-black text-sm">
               Doclan <span className="text-[coral]"> Co.</span>
               <h2 >Exclusive Club</h2>
