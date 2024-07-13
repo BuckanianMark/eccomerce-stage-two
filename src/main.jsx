@@ -7,11 +7,14 @@ import CartPage from './Pages/CartPage.jsx'
 import { store } from './redux/index.js'
 import { Provider } from 'react-redux';
 import CheckoutPage from './Pages/CheckoutPage.jsx'
+import ProductDetails from './Pages/ProductDetails.jsx'
+import { MantineProvider } from '@mantine/core';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
       <Route index element={<HomePage />} />
+      <Route path='/:id' element={<ProductDetails />} />
       <Route path='/cart' element={<CartPage />} />
       <Route path='/checkout' element={<CheckoutPage />} />
     </Route>
@@ -20,7 +23,9 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>
+    <MantineProvider>
   <RouterProvider router={router} />
+    </MantineProvider>
   </Provider>
   
 )

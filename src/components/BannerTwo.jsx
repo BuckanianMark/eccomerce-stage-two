@@ -10,7 +10,7 @@ const BannerTwo = () => {
                 <div className="w-1/2 h-full object-contain">
                     <img src="watch10.jpeg" alt="" className="h-full"  />
                 </div>
-                <div className="flex flex-col text-center uppercase justify-center items-center px-2">
+                <div className="flex flex-col text-center uppercase justify-center items-center px-2 mx-4">
                 <h1 className="text-black font-bold text-2xl">TimeLess Series</h1>
                 <p className="text-gray-800 font-[300]">HANDCRAFTED LIMITED EDITION</p>
                 </div>
@@ -20,7 +20,7 @@ const BannerTwo = () => {
             <div className="w-1/2 h-full object-contain">
                 <img src="watch11.jpeg" alt="" className="h-full" />
             </div>
-                <div className="flex flex-col text-center uppercase justify-center items-center">
+                <div className="flex flex-col text-center uppercase justify-center items-center px-2 mx-4">
 
                 <h1 className="text-black font-bold text-2xl">Rolex DAY-DATE</h1>
                 <p className="text-gray-800 font-[300]">kingsmen Vii collection</p>
