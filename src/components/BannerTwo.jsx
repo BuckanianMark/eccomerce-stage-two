@@ -4,23 +4,23 @@ import { RiCustomerService2Line } from "react-icons/ri";
 const BannerTwo = () => {
   return (
     <div>
-        <div className="flex items-center md:flex-row flex-col justify-evenly mt-6">
-            <div className="bg-[whitesmoke] flex items-center justify-center overflow-hidden h-[300px] rounded">
+        <div className="flex items-center md:flex-row flex-col justify-evenly gap-4 mt-6">
+            <div className="bg-[whitesmoke] md:w-1/2 min-w-[250px]  w-[100%]  flex items-center justify-center overflow-hidden h-[300px] rounded">
                 
                 <div className="w-1/2 h-full object-contain">
                     <img src="watch10.jpeg" alt="" className="h-full"  />
                 </div>
-                <div className="flex flex-col text-center uppercase justify-center items-center px-2 mx-4">
+                <div className="flex w-1/2 flex-col text-center uppercase justify-center items-center px-2 mx-4">
                 <h1 className="text-black font-bold text-2xl">TimeLess Series</h1>
                 <p className="text-gray-800 font-[300]">HANDCRAFTED LIMITED EDITION</p>
                 </div>
 
             </div>
-            <div className="bg-[whitesmoke] flex rounded  h-[300px] overflow-hidden items-center justify-center">
+            <div className="bg-[whitesmoke] md:w-1/2 min-w-[250px]   w-[100%] flex rounded  h-[300px] overflow-hidden items-center justify-center">
             <div className="w-1/2 h-full object-contain">
                 <img src="watch11.jpeg" alt="" className="h-full" />
             </div>
-                <div className="flex flex-col text-center uppercase justify-center items-center px-2 mx-4">
+                <div className="flex flex-col w-1/2 text-center uppercase justify-center items-center px-2 mx-4">
 
                 <h1 className="text-black font-bold text-2xl">Rolex DAY-DATE</h1>
                 <p className="text-gray-800 font-[300]">kingsmen Vii collection</p>
