@@ -19,6 +19,7 @@ const fetchProduct = async (productId) => {
 };
 
 const ProductDetails = () => {
+  const [imageIndex,setImageIndex] = useState(null)
   const [product, setProduct] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [isEmpty, setIsEmpty] = useState(false);
@@ -58,14 +59,34 @@ const ProductDetails = () => {
   if (isError) return <div>Error fetching products</div>;
   if (isEmpty) return <div>No product found</div>;
   if(product) return (
-    <div className="flex md:items-start items-center md:flex-row  flex-col w-[80vw] justify-center">
-      <div className="w-1/2 max-w-[400px]">
+    <div className="flex md:items-start items-center md:flex-row gap-4  flex-col w-[80vw] justify-center">
+      <div className="md:w-1/2 w-[100%] gap-4 max-w-[400px]">
+      <div>
+        {imageIndex ? <>
+          <img 
+          src={`https://api.timbu.cloud/images/${product.photos[imageIndex].url}`} 
+           alt={product.name}  
+          className="w-[100%] object-fill max-w-[250px]"  />
+        </> :<>
         <img  
         src={`https://api.timbu.cloud/images/${product.photos[0].url}`}  
-        height={160} alt={product.name}                    
-        className="w-[100%] object-fill " />
+         alt={product.name}                    
+        className="w-[100%] object-fill max-w-[250px]" />
+        </>}
+      
       </div>
-      <div className="w-1/2 flex flex-col items-start gap-6">
+      <div className="flex items-center mt-4 justify-evenly rounded py-2 border">
+        {product.photos.map((image,index) => (
+          <img 
+          key={index}  
+          src={`https://api.timbu.cloud/images/${product.photos[index].url}`} 
+           width={70} 
+           className="cursor-pointer" 
+           onClick={() => setImageIndex(index)}/>
+        ))}
+      </div>
+      </div>
+      <div className="md:w-1/2 w-[100%] flex flex-col items-start gap-6">
       <h1 className="text-2xl capitalize font-semibold">{product.name}</h1>
       <div
       className="text-md tracking-wide "
